@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex + Humor | Edición Clásica</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="pokedex-shell">
+        <!-- Parte Superior -->
+        <div class="pokedex-top">
+            <div class="main-light"></div>
+            <div class="small-light bg-red-500"></div>
+            <div class="small-light bg-yellow-400"></div>
+            <div class="small-light bg-green-500"></div>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- IZQUIERDA: POKÉMON -->
+            <div class="flex flex-col gap-4">
+                <div class="pokedex-screen">
+                    <div id="pokemonResult" class="lcd-display items-center justify-center text-center">
+                        <i class="fas fa-search text-4xl text-blue-800/20 mb-2"></i>
+                        <p class="text-blue-900 font-bold text-sm">SISTEMA LISTO</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 px-4">
+                    <input type="text" id="pokemonInput" placeholder="Nombre/ID..."
+                        class="flex-grow bg-white border-2 border-red-900 rounded-lg p-2 text-sm">
+                    <button id="pokemonBtn"
+                        class="bg-blue-600 text-white font-black p-3 rounded-full shadow-lg">
+                        <i class="fas fa-power-off"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- DERECHA: CHISTES -->
+            <div class="flex flex-col gap-6">
+                <div class="bg-gray-800 p-4 rounded-lg shadow-inner">
+                    <div id="jokeResult"
+                        class="lcd-joke flex items-center justify-center text-center text-xs text-green-900 font-bold">
+                        <p>PRESIONE BOTÓN NEGRO PARA INICIAR PROTOCOLO DE HUMOR</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <button id="jokeBtn"
+                            class="w-full bg-black text-white text-[10px] font-bold py-4 rounded-lg">
+                            GENERAR CHISTE
+                        </button>
+                    </div>
+
+                    <div class="flex justify-end items-center pr-4">
+                        <div class="cross-button shadow-lg"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS propio -->
+    <script src="js/app.js"></script>
+</body>
+</html>
