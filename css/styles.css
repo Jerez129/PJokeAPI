@@ -1,0 +1,22 @@
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+.pokedex-forma{
+  width: min(900px, 95%);
+  background: #dc2626;
+  border: 8px solid #991b1b;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.cargando{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
