@@ -26,3 +26,20 @@ botonPokemon.onclick = function () {
                 "<p>DEFENSA: " + data.stats[2].base_stat + "</p>";
         });
 };
+
+// JAVA SCRIPT PARA CONSUMIR LA API DE CHISTES
+var botonChiste = document.getElementById("botonChiste");
+var chisteResultado = document.getElementById("chisteResultado");
+
+botonChiste.onclick = function () {
+
+    chisteResultado.innerHTML = "<p>CARGANDO CHISTE...</p>";
+
+    fetch("https://v2.jokeapi.dev/joke/Any?type=single&lang=es")
+        .then(function (respuesta) {
+            return respuesta.json();
+        })
+        .then(function (data) {
+            chisteResultado.innerHTML = "<p>" + data.joke + "</p>";
+        });
+};
